@@ -7,8 +7,8 @@ const Sidebar = () => {
 
   const {productState:{sort,byStock,byRating},productDispatch}= CartState()
   return (
-    <div className="sidebar text-white px-2 py-3">
-      <h4>Filter Products</h4>
+    <div className="sidebar text-white px-2 py-3 headings">
+      <h4 >Filter Products</h4>
       <Form>
         <div className="mb-4 mt-3">
           <Form.Check
@@ -58,7 +58,7 @@ const Sidebar = () => {
         </div>
         <div className="mb-4">{/* Rating Component */}</div>
         <div className="d-grid gap-2">
-          <Button variant="primary" size="md"  onClick={()=>productDispatch({
+          <Button variant="primary" className="bg-gradient " size="md"  onClick={()=>productDispatch({
               type:"CLEAR_FILTER",
             
             })}>

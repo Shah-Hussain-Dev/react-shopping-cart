@@ -50,7 +50,7 @@ function CartItem({ data }) {
               style={{ height: 200 }}
             />
             <Card.Body className="d-flex flex-column justify-content-between ">
-              <Card.Title className="text-secondary">{item.title}</Card.Title>
+              <Card.Title className="text-secondary ">{item.title}</Card.Title>
               <Card.Text className="mb-1">{item.description}</Card.Text>
               
               <Card.Text className="mb-0">

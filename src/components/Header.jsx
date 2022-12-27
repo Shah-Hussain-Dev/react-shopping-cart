@@ -16,7 +16,7 @@ const Header = () => {
     <Navbar bg="dark" variant="dark" className='fixed-top'>
     <Container  className='px-3'>
         <Navbar.Brand>
-          <Link to="/" style={{fontWeight:700,letterSpacing:1,fontSize:25}}>Quick-Kart</Link>
+          <Link to="/" style={{fontWeight:700,letterSpacing:1,fontSize:25}} className="headings">Quick-Kart</Link>
         </Navbar.Brand>
         <Navbar.Text className='d-flex'>
             <FormControl placeholder="Search Product..." className='m-auto search-input' onChange={(e)=>productDispatch({
@@ -32,10 +32,10 @@ const Header = () => {
                  <span style={{fontSize:""}}>{cart.length}</span>
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                   {!cart.length? (<span className='text-center d-block'>Cart is Empty <AiOutlineShoppingCart/></span>):( <span className='px-2 p-0'>
+                   {!cart.length? (<span className='text-center d-block headings py-3 font-weight-bold'>Cart is Empty <AiOutlineShoppingCart/></span>):( <span className='px-2 p-0'>
                    {cart.map((item)=>{
                      return(
-                  <Alert variant='info' className='p-0 selected-cart-items' key={item.id}>
+                  <Alert variant='info' className='p-0 selected-cart-items shadow-lg' key={item.id}>
                   <div className="d-flex align-items-center justify-content-between w-100 ">
                   <img src={item.thumbnail} height="30" className='cart-image' alt={item.title}/>
                  <div className="d-flex flex-column ms-4  selected-cart-details">
