@@ -63,7 +63,7 @@ function CartItem({ data }) {
               <Card.Text className="d-flex  align-items-center justify-content-between">
                 <span className="">
                   <del className="text-danger me-2"></del>
-                  <span className="text-success">  ₹{item.price * 80}</span>
+                  <span className="text-success item-price">  ₹{item.price * 80}</span>
                 </span>
                 {cart.some((c) => c.id === item.id) ? (
                   <Button variant="primary  shadow  ms"  onClick={() => dispatch({type:"REMOVE_FROM_CART",payload:item})}>

@@ -40,7 +40,7 @@ const Header = () => {
                   <img src={item.thumbnail} height="30" className='cart-image' alt={item.title}/>
                  <div className="d-flex flex-column ms-4  selected-cart-details">
                  <small className='mb-0'>{item.title}</small>
-                 <small className='mb-0 text-success font-weight-bold'>  ₹{item.price * 80}</small>
+                 <small className='mb-0 text-success font-weight-bold item-price'>  ₹{item.price * 80}</small>
 
                  
                  </div>

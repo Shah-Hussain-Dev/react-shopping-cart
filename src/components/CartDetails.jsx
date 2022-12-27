@@ -43,7 +43,7 @@ const CartDetails = () => {
                   qty:item.qty
                 }
             })} className="text-primary qty-change" size={25}/></p>
-                      <h5 className="mb-0 text-success font-weight-bold">
+                      <h5 className="mb-0 text-success font-weight-bold item-price">
                       ₹{item.price * 80}
                       </h5>
                     </div>
