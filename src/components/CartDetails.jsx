@@ -15,17 +15,24 @@ const CartDetails = () => {
   useEffect(() => {
     setTotal(cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0));
   }, [cart]);
-
+  let  cartfromlocalstorage = []
+useEffect(()=>{
+ cartfromlocalstorage = [JSON.parse(localStorage.getItem('cart'))] || '[]'
+  console.log("cartfromlocalstorage",cartfromlocalstorage)
+},[])
   if (cart.length > 0) {
     return (
       <Row className="main-section cart-details-section  px-4">
-        <Col className=" my-2 px-3 " md={8}>
+        <Col className=" my-2 ps-2 pe-4 " md={8}>
           <div className="d-flex flex-column gap-2 ">
             {cart.map((item) => {
               return (
                 <Row className="justify-content-between" key={item.id}>
-                  <div className="d-flex align-items-center  box-shadow   bg-light  py-3 justify-content-between w-100 ">
-                    <img src={item.thumbnail} className="cart-details-image box-shadow" alt={item.title}/>
+                  <div className="d-flex align-items-center  box-shadow   bg-light  py-3 justify-content-between w-100 cart-detail-wrapper ">
+               
+                  <img src={item.thumbnail} className="cart-details-image  img-fluid img-thumbnail shadow " alt={item.title}/>
+              
+                 
                     <div className="d-flex flex-column ms-4  selected-cart-details">
                       <h4 className="mb-0">{item.title}</h4>
                       <p className="my-1 ">{item.description}</p>

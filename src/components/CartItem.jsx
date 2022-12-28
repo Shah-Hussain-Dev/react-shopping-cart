@@ -29,9 +29,18 @@ function CartItem({ data }) {
    }
    if(searchQuery){
     sortedProducts = sortedProducts.filter(item=> item.title.toLowerCase().includes(searchQuery))
-
    }
     return sortedProducts;
+  }
+  const handleAddToCart = (item)=>{
+    dispatch({type:"ADD_TO_CART",payload:item})
+    // localStorage.setItem("cart", JSON.stringify(item))
+
+  }
+  const handleRemoveCart = (item)=>{
+    dispatch({type:"REMOVE_FROM_CART",payload:item})
+    // localStorage.removeItem("cart")
+
   }
 
   return (
@@ -66,14 +75,14 @@ function CartItem({ data }) {
                   <span className="text-success item-price">  ₹{item.price * 80}</span>
                 </span>
                 {cart.some((c) => c.id === item.id) ? (
-                  <Button variant="primary  shadow  ms"  onClick={() => dispatch({type:"REMOVE_FROM_CART",payload:item})}>
+                  <Button variant="primary  shadow  ms"  onClick={() => handleRemoveCart(item)}>
                     Remove Cart <BsFillCartXFill size={20} className="pb-1" />
                   </Button>
                 ) : (
                   <Button
                     variant="primary shadow  ms"
                     disabled={!item.stock}
-                    onClick={() => dispatch({type:"ADD_TO_CART",payload:item})}
+                    onClick={() => handleAddToCart(item)}
                   >
                     {item.stock > 0 ? (
                       <span>
