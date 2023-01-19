@@ -7,10 +7,10 @@ const Sidebar = () => {
 
   const {productState:{sort,byStock,byRating},productDispatch}= CartState()
   return (
-    <div className="sidebar text-white px-2 py-3 headings">
-      <h4 >Filter Products</h4>
+    <div className="sidebar text-white px-2 py-3 ">
+      <h4  className="headings">Filter Products</h4>
       <Form>
-        <div className="mb-4 mt-3">
+        <div className="mb-4 mt-3 headings">
           <Form.Check
           inline
             type="radio"
@@ -24,7 +24,7 @@ const Sidebar = () => {
             checked={sort === "lowToHigh"? true : false}
           />
         </div>
-        <div className="mb-4">
+        <div className="mb-4 headings">
           <Form.Check
           type="radio"
             name="group1"
@@ -37,7 +37,7 @@ const Sidebar = () => {
             checked={sort === "highToLow"? true : false}
           />
         </div>
-        <div className="mb-4">
+        <div className="mb-4 headings">
           <Form.Check
             type="switch"
             name="group1"
@@ -50,15 +50,15 @@ const Sidebar = () => {
             checked={byStock}
           />
         </div>
-        <div className="mb-4">
+        <div className="mb-4 headings">
         Rating :  <Rating rating={byRating}  handleClick={(i)=>productDispatch({
           type:"FILTER_BY_RATING",
           payload:i+1
         })} style={{color:"white"}}/>
         </div>
-        <div className="mb-4">{/* Rating Component */}</div>
+        <div className="mb-4 headings">{/* Rating Component */}</div>
         <div className="d-grid gap-2">
-          <Button variant="primary" className="bg-gradient " size="md"  onClick={()=>productDispatch({
+          <Button variant="primary" className=" clear-cart text-white" size="md"  onClick={()=>productDispatch({
               type:"CLEAR_FILTER",
             
             })}>

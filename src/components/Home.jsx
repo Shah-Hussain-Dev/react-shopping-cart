@@ -7,10 +7,10 @@ const Home = () => {
     <div>
     
         <Row className='main-section '>
-            <Col className='bg-dark sidebar-container my-4 ' md={3}>
+            <Col className='bg-dark sidebar-container my-4 ' md={3} sm={11}>
             <Sidebar/>
             </Col>
-            <Col className=' main-container my-2 px-3 ' md={9}>
+            <Col className=' main-container my-2 px-3 ' md={9} sm={11}>
             <Main/>
             </Col>
         </Row>

@@ -5,6 +5,7 @@ import { BsFillCartPlusFill, BsFillCartXFill } from "react-icons/bs";
 import { CartState } from "../context/Context";
 import Rating from "./Rating";
 
+
 function CartItem({ data }) {
   const { products :{products}} = data;
   const {
@@ -34,13 +35,9 @@ function CartItem({ data }) {
   }
   const handleAddToCart = (item)=>{
     dispatch({type:"ADD_TO_CART",payload:item})
-    // localStorage.setItem("cart", JSON.stringify(item))
-
   }
   const handleRemoveCart = (item)=>{
     dispatch({type:"REMOVE_FROM_CART",payload:item})
-    // localStorage.removeItem("cart")
-
   }
 
   return (
@@ -67,7 +64,7 @@ function CartItem({ data }) {
                 <Badge bg="shadow" style={{background:"black",color:"yellow"}}>{item.stock}</Badge>
               </Card.Text>
               <Card.Text className="mb-0">
-        <Rating rating={Math.round(item.rating)} style={{color:"#0d6efd"}}/>
+        <Rating rating={Math.round(item.rating)} style={{color:"yellow"}}/>
     </Card.Text>
               <Card.Text className="d-flex  align-items-center justify-content-between">
                 <span className="">

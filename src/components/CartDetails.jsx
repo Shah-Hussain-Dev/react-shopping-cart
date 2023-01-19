@@ -15,11 +15,8 @@ const CartDetails = () => {
   useEffect(() => {
     setTotal(cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0));
   }, [cart]);
-  let  cartfromlocalstorage = []
-useEffect(()=>{
- cartfromlocalstorage = [JSON.parse(localStorage.getItem('cart'))] || '[]'
-  console.log("cartfromlocalstorage",cartfromlocalstorage)
-},[])
+
+
   if (cart.length > 0) {
     return (
       <Row className="main-section cart-details-section  px-4">
@@ -27,7 +24,7 @@ useEffect(()=>{
           <div className="d-flex flex-column gap-2 ">
             {cart.map((item) => {
               return (
-                <Row className="justify-content-between" key={item.id}>
+                <Row className="justify-content-center" key={item.id}>
                   <div className="d-flex align-items-center  box-shadow   bg-light  py-3 justify-content-between w-100 cart-detail-wrapper ">
                
                   <img src={item.thumbnail} className="cart-details-image  img-fluid img-thumbnail shadow " alt={item.title}/>
@@ -74,7 +71,7 @@ useEffect(()=>{
           style={{ flex: 1 }}
         >
           <div className="px-2 py-3">
-            <h4>SubTotal ({cart.length}) Items</h4>
+            <h4 className="pt-2 headings">SubTotal ({cart.length}) Items</h4>
             <div className="d-flex  flex-column">
               <hr />
               <h4 className="text-primary">Totals :  ₹{total*80}</h4>
