@@ -1,18 +1,17 @@
 import {
   createContext,
-  useState,
+  // useState,
   useReducer,
   useContext,
-  
 } from "react";
 import { cartReducer, productReducer } from "./Reducers";
 import UserData from "./data.json";
 const Cart = createContext();
 const Context = ({ children }) => {
-  const [users, setUsers] = useState(UserData);
+  // const [users, setUsers] = useState(UserData);
 
   const [state, dispatch] = useReducer(cartReducer, {
-    products: users,
+    products: UserData,
     cart: [],
   });
 
