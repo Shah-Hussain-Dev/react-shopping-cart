@@ -47,7 +47,9 @@ function CartItem({ data }) {
         return (
           <Card
             style={{ width: "20rem" }}
-            className="my-3 box-shadow card-item "
+            className="my-3 box-shadow card-item animate__animated animate__fadeInUp"
+            data-aos="fade-up"
+            data-aos-offset="800"
             key={item.id}
           >
             <Card.Img

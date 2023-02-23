@@ -6,7 +6,10 @@ const Home = () => {
   return (
     <div>
       <Row className="main-section ">
-        <Col className="bg-dark sidebar-container my-4 " md={3}>
+        <Col
+          className="bg-dark sidebar-container my-4 animate__animated animate__fadeInDown"
+          md={3}
+        >
           <Sidebar />
         </Col>
         <Col className=" main-container my-2 px-3 " md={9}>

@@ -23,7 +23,10 @@ const CartDetails = () => {
   if (cart.length > 0) {
     return (
       <Row className="main-section cart-details-section ">
-        <Col className=" my-4 px-3 " md={8}>
+        <Col
+          className=" my-4 px-3 animate__animated animate__fadeInDown "
+          md={8}
+        >
           <div className="d-flex flex-column gap-2 ">
             {cart.map((item) => {
               return (
@@ -94,7 +97,7 @@ const CartDetails = () => {
         <Col
           md={3}
           sm={11}
-          className="bg-dark text-white text-center box-shadow cart-totals my-4  "
+          className="bg-dark text-white text-center box-shadow cart-totals my-4  animate__animated animate__fadeInDown "
         >
           <div className="px-2 py-3">
             <h4>SubTotal ({cart.length}) Items</h4>

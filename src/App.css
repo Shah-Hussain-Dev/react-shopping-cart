@@ -185,6 +185,10 @@ left: -192px!important;
     padding-right:14px!important;
     text-align: center!important;
   }
+  .navbar .navbar-container{
+    padding-left: 0.6rem!important;
+    padding-right:  0.6rem!important;
+  }
 
   .selected-cart-card img{
   margin-left: 20px;

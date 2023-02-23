@@ -28,8 +28,8 @@ const Header = () => {
 
   return (
     <Navbar bg="dark" variant="dark" className="fixed-top">
-      <Container className="px-5" fluid>
-        <Navbar.Brand>
+      <Container className="px-5 navbar-container" fluid>
+        <Navbar.Brand className="animate__animated animate__fadeInLeft">
           <Link
             to="/"
             style={{ fontWeight: 700, letterSpacing: 1, fontSize: 25 }}
@@ -37,7 +37,7 @@ const Header = () => {
             <h3 className="title">Quick-Kart</h3>
           </Link>
         </Navbar.Brand>
-        <Navbar.Text className="d-flex">
+        <Navbar.Text className="d-flex animate__animated animate__fadeInRight">
           <FormControl
             placeholder="Search Product..."
             className="m-auto search-input"
