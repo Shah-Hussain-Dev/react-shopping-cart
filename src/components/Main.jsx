@@ -5,12 +5,9 @@ import { CartState } from "../context/Context";
 
 const Main = () => {
   const { state } = CartState();
- 
-
-
 
   return (
-    <Row className=" ms-2 main justify-content-around align-items-stretch">
+    <Row className=" ms-2 main justify-content-evenly align-items-stretch">
       <CartItem data={state} />
     </Row>
   );
